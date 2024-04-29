@@ -4,10 +4,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "http://yeo-yeo.github.io/oh-baby-its-raining",
   "scripts": {
     "build": "esbuild src/App.tsx --bundle --sourcemap --outfile=public/bundle.js",
     "watch": "http-server & esbuild src/App.tsx --bundle --sourcemap --outfile=public/bundle.js --watch",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d build"
   },
   "eslintIgnore": [
     "node_modules, public"
